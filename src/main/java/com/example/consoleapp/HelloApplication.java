@@ -5,6 +5,9 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class HelloApplication extends Application {
@@ -23,14 +26,22 @@ public class HelloApplication extends Application {
 
   @Override
   public void start(Stage stage) {
-    Group group = new Group();
+    Group root = new Group();
     Image icon = new Image(System.getenv("IMAGE"));
-    Scene scene = new Scene(group, Color.YELLOW);
-
-    stage.setWidth(420);
-    stage.setHeight(420);
+    Scene scene = new Scene(root,500, 500, Color.YELLOW);
     stage.setResizable(false);
 
+    Text text = new Text(50, 50,"Chiiick!");
+    text.setFont(Font.font("Nathan", 30));
+    text.setFill(Color.BLUEVIOLET);
+
+    Line line = new Line(250, 100, 450, 100);
+    line.setStroke(Color.GREEN);
+    line.setStrokeWidth(20);
+    line.setRotate(30);
+
+    root.getChildren().add(text);
+    root.getChildren().add(line);
     stage.setTitle("Cool title");
     stage.getIcons().add(icon);
     stage.setScene(scene);
