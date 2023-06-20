@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -28,10 +30,10 @@ public class HelloApplication extends Application {
   public void start(Stage stage) {
     Group root = new Group();
     Image icon = new Image(System.getenv("IMAGE"));
-    Scene scene = new Scene(root,500, 500, Color.YELLOW);
+    Scene scene = new Scene(root, 500, 500, Color.YELLOW);
     stage.setResizable(false);
 
-    Text text = new Text(50, 50,"Chiiick!");
+    Text text = new Text(50, 50, "Chiiick!");
     text.setFont(Font.font("Nathan", 30));
     text.setFill(Color.BLUEVIOLET);
 
@@ -40,8 +42,29 @@ public class HelloApplication extends Application {
     line.setStrokeWidth(20);
     line.setRotate(30);
 
+    Rectangle rectangle = new Rectangle();
+    rectangle.setX(100);
+    rectangle.setY(300);
+    rectangle.setWidth(100);
+    rectangle.setHeight(100);
+    rectangle.setFill(Color.BLACK);
+    rectangle.setStroke(Color.WHITE);
+    rectangle.setStrokeWidth(10);
+
+    Polygon triangle = new Polygon();
+    triangle.getPoints().addAll(
+        350.0, 250.0,
+        300.0, 300.0,
+        400.0, 300.0
+    );
+    triangle.setFill(Color.DEEPPINK);
+    triangle.setStroke(Color.BLUEVIOLET);
+    triangle.setStrokeWidth(5);
+
     root.getChildren().add(text);
     root.getChildren().add(line);
+    root.getChildren().add(rectangle);
+    root.getChildren().add(triangle);
     stage.setTitle("Cool title");
     stage.getIcons().add(icon);
     stage.setScene(scene);
