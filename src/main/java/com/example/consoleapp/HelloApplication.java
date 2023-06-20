@@ -22,7 +22,7 @@ public class HelloApplication extends Application {
   }
 
   @Override
-  public void start(Stage stage) throws Exception {
+  public void start(Stage stage) {
     Group group = new Group();
     Image icon = new Image(System.getenv("IMAGE"));
     Scene scene = new Scene(group, Color.YELLOW);
