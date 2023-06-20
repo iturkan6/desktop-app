@@ -3,6 +3,7 @@ package com.example.consoleapp;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -28,6 +29,13 @@ public class HelloApplication extends Application {
     Group group = new Group();
     Image icon = new Image("C:\\Users\\turkan.muradova\\IdeaProjects\\desktop-app\\src\\main\\resources\\content\\icon.jpg");
     Scene scene = new Scene(group, Color.YELLOW);
+
+    stage.setWidth(420);
+    stage.setHeight(420);
+    stage.setResizable(false);
+
+    stage.setTitle("Cool title");
+    stage.getIcons().add(icon);
     stage.setScene(scene);
     stage.show();
   }
