@@ -27,7 +27,7 @@ public class HelloApplication extends Application {
   @Override
   public void start(Stage stage) throws Exception {
     Group group = new Group();
-    Image icon = new Image("C:\\Users\\turkan.muradova\\IdeaProjects\\desktop-app\\src\\main\\resources\\content\\icon.jpg");
+    Image icon = new Image(System.getenv("IMAGE"));
     Scene scene = new Scene(group, Color.YELLOW);
 
     stage.setWidth(420);
