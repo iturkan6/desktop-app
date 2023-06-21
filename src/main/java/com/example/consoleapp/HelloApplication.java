@@ -69,7 +69,7 @@ public class HelloApplication extends Application {
     circle.setFill(Color.MAROON);
     circle.setRadius(20);
 
-    Image image = new Image("C:\\Users\\turkan.muradova\\IdeaProjects\\desktop-app\\src\\main\\resources\\content\\img.png");
+    Image image = new Image(System.getenv("IMAGE_2"));
     ImageView imageView = new ImageView(image);
     imageView.setX(50);
     imageView.setY(90);
