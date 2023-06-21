@@ -5,6 +5,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
@@ -61,10 +62,17 @@ public class HelloApplication extends Application {
     triangle.setStroke(Color.BLUEVIOLET);
     triangle.setStrokeWidth(5);
 
+    Circle circle = new Circle();
+    circle.setCenterX(400);
+    circle.setCenterY(400);
+    circle.setFill(Color.MAROON);
+    circle.setRadius(20);
+
     root.getChildren().add(text);
     root.getChildren().add(line);
     root.getChildren().add(rectangle);
     root.getChildren().add(triangle);
+    root.getChildren().add(circle);
     stage.setTitle("Cool title");
     stage.getIcons().add(icon);
     stage.setScene(scene);
