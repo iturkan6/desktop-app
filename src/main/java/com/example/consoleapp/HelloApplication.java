@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
@@ -68,11 +69,19 @@ public class HelloApplication extends Application {
     circle.setFill(Color.MAROON);
     circle.setRadius(20);
 
+    Image image = new Image("C:\\Users\\turkan.muradova\\IdeaProjects\\desktop-app\\src\\main\\resources\\content\\img.png");
+    ImageView imageView = new ImageView(image);
+    imageView.setX(50);
+    imageView.setY(90);
+    imageView.setFitHeight(200);
+    imageView.setFitWidth(230);
+
     root.getChildren().add(text);
     root.getChildren().add(line);
     root.getChildren().add(rectangle);
     root.getChildren().add(triangle);
     root.getChildren().add(circle);
+    root.getChildren().add(imageView);
     stage.setTitle("Cool title");
     stage.getIcons().add(icon);
     stage.setScene(scene);
