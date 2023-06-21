@@ -61,7 +61,6 @@ public class HelloApplication extends Application {
     triangle.setStroke(Color.BLUEVIOLET);
     triangle.setStrokeWidth(5);
 
-
     root.getChildren().add(text);
     root.getChildren().add(line);
     root.getChildren().add(rectangle);
